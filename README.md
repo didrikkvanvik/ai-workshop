@@ -19,25 +19,33 @@ claude
 
 ## Din oppgave
 
-Velg én av følgende og bygg den ved hjelp av **kun Claude Code**:
+Bygg et **nettleserbasert spill som bruker et åpent API** — ved hjelp av **kun Claude Code**.
 
-### 🎮 Tre på rad
-- 2 spillere, samme skjerm (ikke mot AI)
-- Tydelig markering av hvem sin tur det er
-- Detekterer vinner og uavgjort, og viser det tydelig
-- Knapp for å starte ny runde uten å laste siden på nytt
+Du velger selv hvilket spill og hvilket API du vil bruke. Her er noen forslag til kombinasjoner som fungerer godt:
 
-### ✌️ Stein saks papir
-- Spiller mot datamaskinen (tilfeldig valg)
-- Viser hva begge valgte etter hvert runde
-- Holder styr på poengsum over flere runder
-- Knapp for å nullstille poengsummen
+### 🎮 Høyere eller lavere — Pokémon
+Bruk **PokeAPI** (`https://pokeapi.co`) — ingen API-nøkkel nødvendig.
+- Vis to tilfeldige Pokémon med bilde og navn
+- Spilleren gjetter hvilken som har høyest base stats totalt
+- Vis fasiten etter hvert valg med poengsum
 
-### 🃏 Memory kortspill
-- Minst 8 kortpar (16 kort totalt)
-- Kort skal ligge med baksiden opp og snus ved klikk
-- Par som matches forblir snudd, feilmatch snus tilbake
-- Viser antall forsøk og gir beskjed når alle par er funnet
+### 🌍 Gjett landet
+Bruk **REST Countries** (`https://restcountries.com`) — ingen API-nøkkel nødvendig.
+- Vis et flagg eller en silhuett
+- Spilleren gjetter landet blant flere alternativer
+- Hold styr på poengsum og antall runder
+
+### 🍹 Cocktail-quiz
+Bruk **TheCocktailDB** (`https://www.thecocktaildb.com/api.php`) — ingen API-nøkkel nødvendig.
+- Vis ingrediensene til en tilfeldig cocktail
+- Spilleren gjetter hva drinken heter
+- Vis bilde og oppskrift når svaret avsløres
+
+### 🚀 Vil du bruke et annet API?
+Bare kjør på. Andre frie APIer uten nøkkel:
+- **Open Meteo** — værdata
+- **DiceBear** — genererte avatarer
+- **NASA APOD** — astronomibilde fra NASA (krever gratis nøkkel)
 
 ---
 
@@ -47,14 +55,14 @@ Velg én av følgende og bygg den ved hjelp av **kun Claude Code**:
 
 | Svak prompt | Sterk prompt |
 |---|---|
-| "Lag spillet" | "Lag et 4x4 grid med 16 kort. Hvert kort skal ha en emoji på fremsiden og være mørkeblå på baksiden." |
+| "Lag spillet" | "Hent to tilfeldige Pokémon fra PokeAPI og vis dem side om side med bilde og navn. Legg til en knapp for 'Høyere' og 'Lavere'." |
 | "Gjør det penere" | "Gjør bakgrunnen mørkegrå og kortene hvite med avrundede hjørner og en subtil skygge" |
-| "Det funker ikke" | "Når jeg klikker to kort som ikke matcher, forblir de snudd. De skal snus tilbake etter 1 sekund." |
+| "Det funker ikke" | "Bildene fra API-et lastes ikke. Konsollen viser CORS-feil på denne URL-en: [lim inn URL]" |
 
 **Andre tips:**
 - Lim inn feilmeldinger direkte fra terminalen eller nettleserkonsollen — ikke omformuler dem
-- Bygg én ting av gangen. Få brettet til å vises før du legger til logikk
-- Vil du ha animasjoner, lyd eller en scoreboard? Bare spør — men få kjernen til å virke først
+- Bygg én ting av gangen. Få API-kallet til å fungere og vise data før du legger til spillogikk
+- Vil du ha animasjoner, lyd, highscore eller en morsom personlighet? Bare spør — men få kjernen til å virke først
 
 ---
 
